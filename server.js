@@ -48,7 +48,7 @@ app.post("/create", async (req, res) => {
 
 app.get("/update/:id", async (req, res) => {
   try {
-    const respose = await axios.post(base_url + "/books/" + req.params.id);
+    const respose = await axios.get(base_url + "/books/" + req.params.id);
     res.render("update", { book: respose.data });
   } catch (err) {
     console.error(err);
