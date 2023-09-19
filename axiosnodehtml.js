@@ -38,7 +38,7 @@ app.get("/create", (req, res) => {
 app.post("/create", async (req, res) => {
   try {
     const data = { title: req.body.title, aurhor: req.body.aurhor };
-    await axios.post(base_url + "/books/" + data);
+    await axios.post(base_url + "/books/" , data);
     res.redirect("/");
   } catch (err) {
     console.error(err);
@@ -59,7 +59,7 @@ app.get("/update/:id", async (req, res) => {
 app.post("/update/:id", async (req, res) => {
   try {
     const data = { title: req.body.title, aurhor: req.body.aurhor };
-    await axios.post(base_url + "/books/" + req.params.id + data);
+    await axios.post(base_url + "/books/" + req.params.id , data);
     res.redirect("/");
   } catch (err) {
     console.error(err);
