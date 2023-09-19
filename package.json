@@ -9,7 +9,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/charun620/Front_end_node.git"
-  },"bugs": {
+  },
+  "bugs": {
     "url": "https://github.com/charun620/Front_end_node/issues"
   },
   "homepage": "https://github.com/charun620/Front_end_node#readme",
