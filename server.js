@@ -3,7 +3,7 @@ const axios = require("axios");
 const app = express();
 var BodyParser = require("body-parser");
 
-const base_url = "http://10.104.10.69";
+const base_url = "http://localhost:3000";
 
 app.set("view engine", "ejs");
 app.use(BodyParser.json());
@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
 app.get("/books/:id", async (req, res) => {
   try {
     const respose = await axios.get(base_url + "/books/" + req.params.id);
-    res.render("books", { books: respose.data });
+    res.render("book", { book: respose.data });
   } catch (err) {
     console.error(err);
     res.status(500).send("Error");
@@ -49,7 +49,7 @@ app.post("/create", async (req, res) => {
 app.get("/update/:id", async (req, res) => {
   try {
     const respose = await axios.post(base_url + "/books/" + req.params.id);
-    res.render("update", { books: respose.data });
+    res.render("update", { book: respose.data });
   } catch (err) {
     console.error(err);
     res.status(500).send("Error");
@@ -59,7 +59,7 @@ app.get("/update/:id", async (req, res) => {
 app.post("/update/:id", async (req, res) => {
   try {
     const data = { title: req.body.title, aurhor: req.body.aurhor };
-    await axios.post(base_url + "/books/" + req.params.id , data);
+    await axios.put(base_url + "/books/" + req.params.id , data);
     res.redirect("/");
   } catch (err) {
     console.error(err);
@@ -77,6 +77,6 @@ app.get("/delete/:id", async (req, res) => {
   }
 });
 
-app.listen(8080,()=>{
-    console.log('Server started on port 8080');
+app.listen(5500,()=>{
+    console.log('Server started on port 5500');
 })
