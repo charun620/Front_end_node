@@ -4,7 +4,17 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },"repository": {
+    "type": "git",
+    "url": "git+https://github.com/charun620/Front-End-Node"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charun620/Front-End-Nodeissues"
+  },
+  "homepage": "https://github.com/charun620/Front-End-Node#readme",
   "keywords": [],
   "author": "",
   "license": "ISC",
