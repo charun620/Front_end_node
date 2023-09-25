@@ -16,9 +16,6 @@
     "url": "https://github.com/charun620/Front-End-Nodeissues"
   },
   "homepage": "https://github.com/charun620/Front-End-Node#readme",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "axios": "^1.5.0",
     "body-parser": "^1.20.2",
