@@ -4,14 +4,14 @@ const app = express();
 const path = require("path");
 var BodyParser = require("body-parser");
 const base_url = "http://localhost:3000";
-// const base_url = "https://node52307-chern.proen.app.ruk-com.cloud";
+// const base_url = "https://node52307-chern.proen.app.ruk-com.cloud/books";
 
 app.set("views", path.join(__dirname, "/public/views"));
 app.set("view engine", "ejs");
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(__dirname + "/public"));
+// app.use(express.static(__dirname + "/public"));
 
 
 app.get("/", async (req, res) => {
