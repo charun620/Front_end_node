@@ -13,6 +13,7 @@ app.use(BodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + "/public"));
 
+
 app.get("/", async (req, res) => {
   try {
     const response = await axios.get(base_url + "/books");
