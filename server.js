@@ -81,11 +81,11 @@ app.get("/delete/:id", async (req, res) => {
   }
 });
 
-// app.listen(777, () => {
-//    console.log('Server started on port 777');
-// });
-
-app.listen(5500, () => {
-  console.log('Server started on port 5500');
+app.listen(777, () => {
+   console.log('Server started on port 777');
 });
+
+// app.listen(5500, () => {
+//   console.log('Server started on port 5500');
+// });
 
